@@ -38,6 +38,7 @@ async function start(){
             }
         });
     }else{
+        document.querySelector('div.title').style.display='none';
         document.querySelector('#buddyContainer').innerHTML = "<h3>This extension only works in facebook website.</h3>"
     }
 }
@@ -48,15 +49,16 @@ function getAccounts(){
     end = html.indexOf("script", start)-15;
     jsonStr = html.substr(start,end-start);
     jsonStr = jsonStr.substr('',jsonStr.lastIndexOf(']')+1);
-    console.log(jsonStr)
     json = JSON.parse(jsonStr);
     $temp = '';
     json.forEach(element => {
-        $temp += 
-        `<div class="flexrow" data-link="https://www.facebook.com/profile.php?id=${element.user.id}">
-            <img src="${element.user.profile_picture.uri}" title="${element.user.name}">
-            <a class="flexrow username" href="https://www.facebook.com/profile.php?id=${element.user.id}"><p>${element.user.name}</p> <img src="img/link.png" width="15px"></a>
-        </div>`;
+        if(element.user != null){
+            $temp += 
+            `<div class="flexrow" data-link="https://www.facebook.com/profile.php?id=${element.user.id}">
+                <img src="${element.user.profile_picture.uri}" title="${element.user.name}">
+                <a class="flexrow username" href="https://www.facebook.com/profile.php?id=${element.user.id}"><p>${element.user.name}</p> <img src="img/link.png" width="15px"></a>
+            </div>`;
+        }
     });
     return $temp;
 }

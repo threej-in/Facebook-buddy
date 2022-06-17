@@ -41,23 +41,6 @@
             align-items: flex-start;
             justify-content: flex-start;
         }
-        .flexaee{
-            align-items: flex-end;
-            justify-content: flex-end;
-            align-content: center;
-        }
-        .flexacs{
-            align-items: center;
-            justify-content: flex-start;
-        }
-        .flexacc{
-            align-items: center;
-            justify-content: center;
-        }
-        .flexace{
-            align-items: center;
-            justify-content: flex-end;
-        }
         header img#changeView{
             float: right;
             width: 30px;
@@ -66,6 +49,10 @@
             padding: 2px;
             border-radius: 2px;
             cursor: pointer;
+        }
+        div.title{
+            padding: 10px;
+            color: grey;
         }
         div#buddyContainer{
             padding: 12px;
@@ -101,10 +88,13 @@
     </style>
 </head>
 <body>
-    <header class="flexrow" style="justify-content: space-between;">
+    <header class="flexrow" style="justify-content: space-between;position: sticky;top: 0;">
         <h3>Facebook buddy</h3>
         <img src="img/list.png" alt="" id="changeView" data-current-view="grid">
     </header>
+    <div class="title">
+        <h5>List of your friends who visited your profile recently.</h5>
+    </div>
     <div class="flexcol flexass userlist" id="buddyContainer">
         
     </div>
