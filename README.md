@@ -8,5 +8,5 @@ Handy tool for FaceBook.
 - Lightweight
 
 ## Screenshots
-![Grid view](img/s1.png)
-![List view](img/s2.png)
+![Grid view](https://github.com/threej-in/Facebook-buddy/blob/main/img/s1.PNG)
+![List view](https://github.com/threej-in/Facebook-buddy/blob/main/img/s2.PNG)
