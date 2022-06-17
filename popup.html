@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+        }
+        body{
+            width: 350px;
+        }
+        header, footer{
+            background-color: royalblue;
+            color: aliceblue;
+            padding: 10px;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        .flexrow{
+            display: flex;
+            flex-flow: row;
+            row-gap: 1.4em;
+            column-gap: 0.7em;
+            align-items: center;
+            flex-wrap: wrap;
+            
+        }
+        .flexcol{
+            display: flex;
+            flex-flow: column;
+            column-gap: 0.4em;
+            row-gap: 0.4em;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .flexass{
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        .flexaee{
+            align-items: flex-end;
+            justify-content: flex-end;
+            align-content: center;
+        }
+        .flexacs{
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .flexacc{
+            align-items: center;
+            justify-content: center;
+        }
+        .flexace{
+            align-items: center;
+            justify-content: flex-end;
+        }
+        header img#changeView{
+            float: right;
+            width: 30px;
+            height: 30px;
+            background: white;
+            padding: 2px;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+        div#buddyContainer{
+            padding: 12px;
+        }
+        div#buddyContainer div{
+            width: 100%;
+            padding: 10px;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+        div#buddyContainer div img:first-child{
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        div.userlist{
+            display: flex;
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        div.userlist div{
+            padding: 0!important;
+            width: fit-content!important;
+            background-color: transparent!important;
+            margin:5px 0;
+        }
+        div.userlist div img{
+            width: 50px;
+        }
+        a.username{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="flexrow" style="justify-content: space-between;">
+        <h3>Facebook buddy</h3>
+        <img src="img/list.png" alt="" id="changeView" data-current-view="grid">
+    </header>
+    <div class="flexcol flexass userlist" id="buddyContainer">
+        
+    </div>
+    <footer>
+        <h5>A product of <a href="https://threej.in/facebook-buddy" id="branding">threej.in</a></h5>
+    </footer>
+</body>
+<script src="popup.js"></script>
+</html>

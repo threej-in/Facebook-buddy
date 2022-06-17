@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Facebook buddy",
+    "description": "Click to know who is stalking your facebook profile.",
+    "version": "1.0.0",
+    "author": "Jitendra Pal",
+    
+    "action":{
+        "default_popup": "popup.html",
+        "default_title": "Facebook buddy"
+    },
+    "icons": {
+        "16": "img/icon16.png",
+        "32": "img/icon32.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage"
+    ],
+    "host_permissions":[
+        "https://*/*"
+    ],
+    "homepage_url": "https://threej.in/facebook-buddy"
+}
