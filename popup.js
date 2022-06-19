@@ -5,6 +5,11 @@ async function start(){
         chrome.tabs.create({url:e.target.getAttribute('href')})
     })
 
+    //Github link
+    document.querySelector('footer img').addEventListener('click',(e)=>{
+        chrome.tabs.create({url:'https://github.com/threej-in/Facebook-buddy'})
+    })
+
     //attaching click event to change the view
     document.querySelector('img#changeView').addEventListener('click',(e)=>{
         if(e.target.getAttribute('data-current-view') == 'list'){
