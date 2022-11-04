@@ -53,7 +53,7 @@ function getAccounts(){
     start = html.search('chat_sidebar_contact_rankings')+31;
     end = html.indexOf("script", start)-15;
     jsonStr = html.substr(start,end-start);
-    jsonStr = jsonStr.substr('',jsonStr.lastIndexOf(']')+1);
+    jsonStr = jsonStr.substr('',jsonStr.lastIndexOf('}}}]')+4);
     json = JSON.parse(jsonStr);
     $temp = '';
     json.forEach(element => {
